@@ -1,0 +1,93 @@
+{% extends "KabasisWebApp/base.html"%}
+
+{% load static %}
+   
+{% block content%}
+
+   <!-- Heading -->
+   <section class="page-section clearfix">
+    <div class="container">
+      <div class="intro">
+        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'KabasisWebApp/img/cibercandado.png' %}" alt="">
+        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+          <h2 class="section-heading mb-4" >
+            <span class="section-heading-lower">¿Qué es KABASIS?</span>
+          </h2>
+          <p class="mb-3">KABASIS es una herramienta diseñada para mejorar la ciberseguridad en las organizaciones, relativo a las vulnerabilidades a las que están expuestos sus colaboradores. Se basa en el enfoque KAB (Conocimiento, Actitudes y Comportamiento) en concordancia y correspondencia a las buenas prácticas de seguridad de la información. Utiliza una evaluación en línea y reporte gerencial que permite la temprana y oportuna toma de decisiones que permiten enfrentar las vulnerabilidades a las que están expuestos sus colaboradores y construir el «Human Firewall» de la organización.
+          </p>
+         
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+   <!-- Message -->
+<section class="page-section cta">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-9 mx-auto">
+        <div class="text-center rounded" style="border: 4px solid white; padding: 80px; color: white;">
+          <h2 class="section-heading mb-4">
+            <span class="section-heading-lower">¿QUÉ MIDE KABASIS?</span>
+          </h2>
+          <p class="mb-0">Mide el nivel de riesgo de sus colaboradores de ser víctimas de ciberataques que afecten a su organización.</p>
+          <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/bOXQGr6WLUw" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="page-section cta">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="text-center rounded" style="padding: 0px 20px 0px 30px; color: white; margin-top: -50px;" >
+            <h2 class="section-heading mb-4">
+              <div>
+                <img src="{% static 'KabasisWebApp/img/kabasis_negro_logo1.png' %}" alt="Imagen de Kabasis" class="text-center" width="200px" height="200px">
+              </div>
+              <h1 class="mb-0">La Triada KAB</h1>
+            </h2>
+            <br>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="icon text-center">
+                  <img src="{% static 'KabasisWebApp/img/lampara.png' %}" alt="Icono 1" width="120px" height="120px">
+                  <br><br><br>
+                  <h5>NOWLEDGE – CONOCIMIENTO</h5>
+                  <p>Conocimiento sobre aspectos claves de la Seguridad de la Información.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="icon text-center">
+                  <img src="{% static 'KabasisWebApp/img/cara-sonriente.png' %}" alt="Icono 2" width="120px" height="120px">
+                  <br><br><br>
+                  <h5>ATTITUDE – ACTITUDES.</h5>
+                  <p>Actitudes y percepciones hacia la Seguridad de la Información en su organización.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="icon text-center">
+                  <img src="{% static 'KabasisWebApp/img/cerebro.png' %}" alt="Icono 3" width="120px" height="120px">
+                  <br><br><br>
+                  <h5>BEHAVIOR – CONDUCTA</h5>
+                  <p>Auto-reporte conductual frente a temas asociados a Seguridad de la Información.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+
+
+    
+    
+
+{% endblock %}

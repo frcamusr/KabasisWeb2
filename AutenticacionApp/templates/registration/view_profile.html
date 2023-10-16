@@ -1,0 +1,38 @@
+{% extends "KabasisWebApp/base.html" %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6">
+            <div class="card" style="border-radius: 20px;">
+                <div class="card-body text-center">
+                    <h2>Perfil de Usuario</h2>
+                    <hr>
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            {% if user.profile_picture %}
+                                <img src="{{ user.profile_picture.url }}" alt="{{ user.username }}" class="img-fluid" style="max-width: 200px; max-height: 200px; border-radius: 40%;">
+                            {% else %}
+                                <!-- Agrega la ruta de tu imagen predeterminada aquí -->
+                                <img src="{% static 'KabasisWebApp/img/default_profile3.jpg' %}" alt="Imagen Predeterminada" class="img-fluid" style="max-width: 200px; max-height: 200px; border-radius: 50%;">
+                            {% endif %}
+                        </div>
+                        <div class="user-details mt-4">
+                            <p><strong>Nombre de Usuario:</strong> {{ user.username }}</p>
+                            <p><strong>Tipo de Usuario:</strong> {{ user.tipo_usuario }}</p>
+                            <p><strong>Nombre:</strong> {{ user.first_name }}</p>
+                            <p><strong>Apellidos:</strong> {{ user.last_name }}</p>
+                            <p><strong>Correo Electrónico:</strong> {{ user.email }}</p>
+                            <!-- Agrega más campos de información del usuario según tus modelos -->
+                        </div>
+                    </div>
+                    <a href="{% url 'edit_profile' %}" class="btn btn-primary mt-3">Editar Perfil</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+{% endblock %}
