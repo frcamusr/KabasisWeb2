@@ -155,9 +155,8 @@ p {
 
 .cta {
   padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
   background-image: linear-gradient(to top, rgba(150, 0, 0, 0.6), #123989, #296FFA, rgba(150, 0, 0, 0.6)); /* Fondo degradado */
-
 }
 
 .cta .cta-inner {
@@ -306,20 +305,20 @@ ul.errorlist{
 
 
 .video-container {
-  position: relative;
-  padding-bottom: 56.25%; /* Esto establece el aspect ratio (16:9) del video */
-  padding-top: 30px;
-  height: 0;
-  overflow: hidden;
+  max-width: 100%; /* Establece un ancho máximo para el contenedor del video */
+  width: 80%; /* Ajusta el ancho del contenedor según tus necesidades */
+  margin: 0 auto; /* Centra el contenedor horizontalmente en la sección */
 }
 
+
 .video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100%; /* El video ocupará todo el ancho del contenedor */
+  height: 100%; /* El video ocupará toda la altura del contenedor */
 }
+
+
+
+
 
 
 

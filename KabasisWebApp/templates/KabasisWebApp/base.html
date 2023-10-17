@@ -10,6 +10,7 @@
 
      <!-- Fonts -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
       
     
      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet"> 
@@ -18,11 +19,14 @@
 
     <!-- Styles -->
     <link href="{% static 'KabasisWebApp/css/gestion.css' %}" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 
 <body>
   <div>
-    <img src="{% static 'KabasisWebApp/img/kabasis_negro_logo1.png' %}" alt="Imagen de Kabasis" class="imagen-kabasis text-center">
+    <img src="{% static 'KabasisWebApp/img/kabasis_negro_logo1.png' %}" alt="Imagen de Kabasis" class="imagen-kabasis text-center" style="max-width: 200px; height: auto";>
   </div>
 
 
@@ -94,40 +98,45 @@
 
     <!-- Footer -->
     <footer class="footer text-faded text-center py-5">
+
       <div class="container">
+
         <p class="m-0">
-	        <a href="#" class="link">
-	          <span class="fa-stack fa-lg">
-	            <i class="fa fa-circle fa-stack-2x"></i>
-	            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-	          </span>
-	        </a>
-	        <a href="#" class="link">
-	          <span class="fa-stack fa-lg">
-	            <i class="fa fa-circle fa-stack-2x"></i>
-	            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-	          </span>
-	        </a>
-	        <a href="#" class="link">
-	          <span class="fa-stack fa-lg">
-	            <i class="fa fa-circle fa-stack-2x"></i>
-	            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-	          </span>
-	        </a>
-	    </p>
+          <a href="#" class="link">
+            <span class="fa-stack fa-lg">
+              <i class="fab fa-circle fa-stack-2x"></i>
+              <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+          <a href="#" class="link">
+            <span class="fa-stack fa-lg">
+              <i class="fab fa-circle fa-stack-2x"></i>
+              <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+          <a href="#" class="link">
+            <span class="fa-stack fa-lg">
+              <i class="fab fa-circle fa-stack-2x"></i>
+              <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+        </p>
+        
         <p class="m-0 mbt">
         	<a href="sample.html" class="link">Política de privacidad</a> ·
         	<a href="sample.html" class="link">Aviso legal</a> ·
         	<a href="sample.html" class="link">Cookies</a>
-		</p>
+		    </p>
+
         <p class="m-0 mbt1">&copy; Kabasis 2023</p>
+
       </div>
+
 	</footer>
 
     <!-- Bootstrap -->
     <script src="/vendor/jquery/jquery.min.js"></script>
     <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
     <!--swift alert2-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
@@ -147,10 +156,9 @@
 
     {% endif %}
 
+    
+
 </body>
 
 
 </html>
-
-<!--{% if perms.AutenticacionApp.view_servicios%}-->
-<!--{% endif %}-->
