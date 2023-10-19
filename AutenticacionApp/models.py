@@ -9,10 +9,11 @@ class CustomUser(AbstractUser):
         ('estudiante', 'Estudiante'),
         ('visualizador', 'Visualizador'),
         ('reporteria', 'Reporteria'),
+        ('administrador_empresa', 'Administrador empresa'),
     )
 
     tipo_usuario = models.CharField(
-        max_length=20,
+        max_length=50,
         choices=TIPO_USUARIO_CHOICES,
         default='',
         blank=True,
