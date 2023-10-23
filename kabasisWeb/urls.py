@@ -27,11 +27,13 @@ urlpatterns = [
 
     path('registro/', include('AutenticacionApp.urls')),
 
-    path('autenticacion', include('AutenticacionApp.urls')),
+    path('autenticacion/', include('AutenticacionApp.urls')),
 
     path('accounts/', include('django.contrib.auth.urls')),
     
     path('', include('KabasisWebApp.urls')),
+
+    path('listar_curso/', include('CursosApp.urls')),
 
 ]
 
