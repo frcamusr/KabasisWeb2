@@ -14,13 +14,17 @@
 
                <div class="card-body">
 
-                  <h2 class="text-center">Modificar curso</h2>
+                  <div class="text-center">
+                     <a class="btn btn-info fas fa-arrow-left d-flex float-left" href="{% url 'listar_curso' %}">&nbsp;Atrás</a>
+                 </div>
+                  
+                  <h2 class="text-center" style="margin-right: 90px">Modificar curso</h2>
 
                   <form action="" method="post" class="my-3" enctype="multipart/form-data">  <!-- Agregar una clase 'my-3' para ajustar el margen vertical -->
                      {% csrf_token %}
                      {{ form }}
                      <div class="d-flex justify-content-center my-3">  <!-- Agregar una clase 'my-3' para ajustar el margen vertical -->
-                         <input type="reset" value="Cancelar" class="btn btn-secondary mx-2">
+                         <input type="reset" value="Limpiar" class="btn btn-secondary mx-2">
                          <input type="submit" value="Modificar" class="btn btn-primary mx-2">
                      </div>
                  </form>

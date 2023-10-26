@@ -1,0 +1,38 @@
+{% extends "KabasisWebApp/base.html" %}
+
+{% block content %}
+    <section class="page-section cta" style="margin-top: 10px; margin-bottom: 10px;">
+        <h1 style="text-align: center; color: white; margin-top: -50px;">{{ curso.nombre | upper }}</h1>
+        <div class="container">
+            <div class="text-center">
+                <a class="btn btn-success btn-block" href="{% url 'listar_unidad' curso.id%}">Administrar unidades</a>
+            </div>
+            <div class="row" style="flex-direction: column-reverse; align-items: center;">
+                {% for unidad in unidades %}
+                <div class="col-md-3" style="margin: 20px 0px 0px 0px;">
+                    <button class="oval-button" onclick="handleButtonClick('{{ unidad.titulo }}')">
+                        {{ unidad.titulo }}
+                    </button>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .oval-button {
+            width: 100px;
+            height: 50px;
+            background-color: rgb(120, 112, 242);
+            color: white;
+            border-radius: 50%;
+        }
+    </style>
+
+    <script>
+        function handleButtonClick(titulo) {
+            alert("Hiciste clic en: " + titulo);
+            // Agrega aquí la lógica que deseas ejecutar al hacer clic en el botón.
+        }
+    </script>
+{% endblock %}

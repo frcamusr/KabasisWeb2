@@ -88,8 +88,18 @@ WSGI_APPLICATION = 'kabasisWeb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'mssql',
+        'NAME': 'kabasisweb30',
+        'USER': 'sa',
+        'PASSWORD': 'tic2023++',
+        'HOST': 'SRV-DC1',
+        'PORT': '',
+        'OPTIONS': {
+            'driver': 'ODBC Driver 17 for SQL Server',
+        },
+
+
+
     }
 }
 

@@ -317,7 +317,17 @@ ul.errorlist{
 }
 
 
+.boton-volver {
+  background-color: blue;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
 
+.boton-volver i {
+  margin-right: 5px;
+}
 
 
 
