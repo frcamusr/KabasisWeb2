@@ -14,6 +14,7 @@ class Question(models.Model):
     def __str__(self):
         return self.id
     
+# crear el modelo Answer con los campos question, user, text_answer y option_answer
 class Answer(models.Model):
     id=models.AutoField(primary_key=True)
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
