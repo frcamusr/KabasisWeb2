@@ -25,5 +25,11 @@ urlpatterns = [
 ]
 
 
+<<<<<<< HEAD
+=======
+
+# urls.py
+
+>>>>>>> 5189778f4bdd2befd384954f6d9a536dfc723bbd
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL[1:], document_root=settings.MEDIA_ROOT)

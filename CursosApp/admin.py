@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from django.contrib import admin
 from .models import Curso, UnidadCurso, Video, Actividad, Quizz, Pregunta, OpcionRespuesta
 
@@ -32,3 +33,15 @@ class PreguntaAdmin(admin.ModelAdmin):
 @admin.register(OpcionRespuesta)
 class OpcionRespuestaAdmin(admin.ModelAdmin):
     list_display = ('texto_respuesta',)
+=======
+from django.contrib import admin
+from .models import Curso
+
+# Register your models here.
+
+
+class CursoAdmin(admin.ModelAdmin):
+    readonly_fields = ('created', 'updated')
+
+admin.site.register(Curso)
+>>>>>>> 5189778f4bdd2befd384954f6d9a536dfc723bbd

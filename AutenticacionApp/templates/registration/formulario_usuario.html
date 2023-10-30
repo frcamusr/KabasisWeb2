@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends "KabasisWebApp/base.html" %}
 
 {% load static %}
@@ -66,3 +67,68 @@
   </div>
 </div>
 {% endblock %}
+=======
+{% extends "KabasisWebApp/base.html" %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="card-title">Formulario de Usuario</h1>
+
+          <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="{{ formulario.username.id_for_label }}">{{ formulario.username.label }}:</label>
+              {{ formulario.username }}
+            </div>
+            <div class="form-group">
+              <label for="{{ formulario.first_name.id_for_label }}">{{ formulario.first_name.label }}:</label>
+              {{ formulario.first_name }}
+            </div>
+            <div class="form-group">
+              <label for="{{ formulario.last_name.id_for_label }}">{{ formulario.last_name.label }}:</label>
+              {{ formulario.last_name }}
+            </div>
+            <div class="form-group">
+              <label for="{{ formulario.email.id_for_label }}">{{ formulario.email.label }}:</label>
+              {{ formulario.email }}
+            </div>
+            <div class="form-group">
+              <label for="{{ formulario.password1.id_for_label }}">{{ formulario.password1.label }}:</label>
+              {{ formulario.password1 }}
+            </div>
+            <div class="form-group">
+              <label for="{{ formulario.password2.id_for_label }}">{{ formulario.password2.label }}:</label>
+              {{ formulario.password2 }}
+            </div>
+            <!-- Añade un campo para el tipo de usuario personalizado -->
+            <div class="form-group">
+              <label for="{{ formulario.tipo_usuario.id_for_label }}">{{ formulario.tipo_usuario.label }}:</label>
+              {{ formulario.tipo_usuario }}
+            </div>
+            <!-- Añade un campo para la imagen de perfil -->
+            <div class="form-group">
+              <label for="{{ formulario.profile_picture.id_for_label }}">{{ formulario.profile_picture.label }}:</label>
+              {{ formulario.profile_picture }}
+            </div>
+            <!-- Envuelve el botón en un div para centrarlo verticalmente -->
+            <div class="text-center">
+              <button type="submit" class="btn btn-success btn-lg btn-block">Guardar</button>
+            </div>
+          </form>
+
+          <!-- ... (código posterior) ... -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+>>>>>>> 5189778f4bdd2befd384954f6d9a536dfc723bbd

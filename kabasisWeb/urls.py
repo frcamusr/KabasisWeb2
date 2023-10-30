@@ -33,7 +33,11 @@ urlpatterns = [
     
     path('', include('KabasisWebApp.urls')),
 
+<<<<<<< HEAD
     path('cursos/', include('CursosApp.urls')),
+=======
+    path('listar_curso/', include('CursosApp.urls')),
+>>>>>>> 5189778f4bdd2befd384954f6d9a536dfc723bbd
 
 ]
 
