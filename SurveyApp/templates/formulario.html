@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg p-4">
+                <h2 class="text-center mb-4">Preguntas</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    {% for pregunta in questions %}
+                        <div class="question mb-4">
+                            <h5>{{ forloop.counter }}. {{ pregunta.text }}</h5>
+                            {% if pregunta.question_type == 'text' %}
+                                <textarea class="form-control" id="text_answer_{{ pregunta.id }}" name="text_answer_{{ pregunta.id }}" rows="6" placeholder="Escribe tu respuesta aquí (máx. 500 caracteres)" required></textarea>
+                            {% elif pregunta.question_type == 'option' %}
+                                <input type="radio" id="option_a_{{ pregunta.id }}" name="option_answer_{{ pregunta.id }}" value="a" required>
+                                <label for="option_a_{{ pregunta.id }}">a. {{ pregunta.option_a }}</label><br>
+                                <input type="radio" id="option_b_{{ pregunta.id }}" name="option_answer_{{ pregunta.id }}" value="b" required>
+                                <label for="option_b_{{ pregunta.id }}">b. {{ pregunta.option_b }}</label><br>
+                                <input type="radio" id="option_c_{{ pregunta.id }}" name="option_answer_{{ pregunta.id }}" value="c" required>
+                                <label for="option_c_{{ pregunta.id }}">c. {{ pregunta.option_c }}</label><br>
+                                <input type="radio" id="option_d_{{ pregunta.id }}" name="option_answer_{{ pregunta.id }}" value="d" required>
+                                <label for="option_d_{{ pregunta.id }}">d. {{ pregunta.option_d }}</label><br>
+                            {% endif %}
+                            <input type="hidden" name="question_id_{{ pregunta.id }}" value="{{ pregunta.id }}">
+                        </div>
+                    {% empty %}
+                        <p>No hay preguntas</p>
+                    {% endfor %}
+                    <button type="submit" class="btn btn-primary">Enviar Respuestas</button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
