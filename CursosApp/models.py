@@ -28,8 +28,9 @@ class UnidadCurso(models.Model):
 # Modelo para la tabla de Videos relacionados con las unidades
 class Video(models.Model):
     unidad = models.ForeignKey(UnidadCurso, on_delete=models.CASCADE)
+    
     titulo = models.CharField(max_length=255)
-    archivo = models.FileField(upload_to='videos/', null=True, blank=True)
+    video_url = models.URLField()
     descripcion = models.TextField()
 
     def __str(self):

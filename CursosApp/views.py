@@ -69,8 +69,6 @@ def eliminar_curso(request, id):
     return redirect(to="listar_curso")
 
 
-from django.shortcuts import render
-
 
 def ver_curso(request, id):
     curso = Curso.objects.get(pk=id)
@@ -97,7 +95,7 @@ def agregar_unidad(request):
             curso_id = request.POST.get('curso')  # Asumiendo que el campo del formulario se llama 'curso'
             curso = Curso.objects.get(pk=curso_id)  # Obtén el curso correspondiente desde la base de datos
             # Concatenar el nombre del curso al título de la unidad
-            unidad.titulo = f"{unidad.titulo}"
+            unidad.titulo = f"{curso.nombre} - {unidad.titulo}"
             unidad.curso = curso  # Asignar el curso al que pertenece esta unidad
             unidad.save()  # Ahora guarda la unidad con el curso asignado y el nombre modificado
             messages.success(request, 'Unidad creada con éxito.')
